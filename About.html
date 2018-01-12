@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+<head>
+
+    body {
+        background-color: white;
+        color: black;
+    }
+    .footer {
+    		position: fixed;
+    		left: 0;
+    		bottom: 0;
+    		width: 100%;
+    		background-color: black;
+    		color: white;
+    		text-align: center;
+    }
+    ul {
+        list-style-type: none;
+				margin: 0;
+        padding: 0;
+				overflow: hidden;
+        background-color: #333;
+
+
+
+}
+.checked {
+  color: orange;
+}
+    li a, dropbtn {
+        display: inline-block;
+        color: white;
+				text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li {
+        float: left;
+
+
+    }
+    li:last-child {
+
+            border-bottom: none;
+    }
+    li a.active {
+
+        background-color: lightblue;
+        color: black;
+    }
+    li a:hover:not(.active), .dropdown:hover .dropbtn {
+
+        background-color: #111;
+				margin: 0;
+
+
+    }
+		li.dropdown {
+			display: inline-block;
+		}
+		.active {
+			background color: #4CAF50;
+		}
+
+    .newspaper {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+    -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: lightblue; /* Firefox */
+    column-rule-color: lightblue;
+}
+
+    .dropbtn {
+    background-color: lightblue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: blue;
+}
+   img {
+
+          padding: 10px;
+          border-radius: 50%;
+
+    }
+    .col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;}
+
+    .row:: after {
+			content: "";
+			clear: both;
+			display: 15px;
+		}
+
+		[class *="col-"]{
+			float: left;
+			padding: 15px;
+		}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+    font-family: "Lucida Sans", sans-serif;
+    }
+.header {
+    background-color: white;
+    color: black;
+
+    }
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+.menu li:hover {
+    background-color: #0099cc;
+    }
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  h1 {
+    text-align: center;
+  }
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .main {
+    margin-top: 60px;
+    height: 1500px;
+  }
+  .about{
+
+      box-sizing: border-box;
+      background: lightgrey;
+  }
+  .fa {
+    padding: 15px;
+    font-size: 16px;
+
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 3px 3px;
+
+
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-google {
+background: #dd4b39;
+color: white;
+}
+
+button.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+  background-color: #ccc;
+}
+
+button.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+button.accordion.active:after {
+  content: "\2212";
+}
+
+div.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 25px;
+}
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+</style>
+</head>
+<body>
+<title>NWM Solutions</title>
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="styles/main.css" rel="stylesheet" type= "text/css"/>
+
+<div class="navbar">
+        <ul>
+             <li><a class="active" href="#company">NWM Technologies LLC</a></li>
+            <li><a href="index1.html">Home</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li style="float: right"><a href="About.html">About Us</a></li>
+       </ul>
+</div>
+
+
+
+<div class="main">
+<h1>So what is NWM Technologies about?</h1><br>
+<div class="polaroid">
+  <img src="MarcusWebsitePhoto.JPG" "alt="Picture of Founder" style="padding:12px; width="250" height="300">
+</div>
+
+<button class="accordion">Software Development</button>
+  <div class="panel">
+    <p>NWM Technologies develops buisness websites for clients who are eager to get their company going for the world to see.
+      It doesn't stop wiht just buiness, we also specilaize in any website design for any client to use. Our developers work hard to meet the requirements that clients give us to meet their satisifaction.
+      Our concepts range from as basic as all text webpages to multi function websites to go far beyond a blog page.
+      Any ambitious client looking to create a website, that being a live resume for employers to see or just a blog post
+      that is viewed daily, we meet the clients needs and look to innovate the world of web design. Depending on the request,
+      jobs can take anywhere from a week to a couple weeks, given the work load. We are not an educational service, but rather a
+      web design service. All services are projects we recieve from clients.<p>
+  </div>
+<button class="accordion">Hardware/Software Upgrades and Repairs</button>
+  <div class="panel">
+    <p>NWM Technologies also specializes in computer repair and upgrades. We work on both hardware and software side repairs. I will slip the hardware and software
+      side of the repirs into a category.<h1> On the Hardware side:</h1> everyone uses their computers to their full potential; and sometimes the computer gets hot, resulting in a
+      cooling fan malfunction. Working on a computer with a failed cooling fan could cause the computer to shut down constantly. This is very annoying to your average user.Bring in your
+      computer we can easily fix this issue with a quick order and repair. <strong>Random Access Memory (RAM) </strong> is also a field of upgrades that we specialize in. This typically happen to most buisnes computers
+      that use of alot of memory on a daily basis like grocery stores and invest banking companies. Upgrading RAM is very important because any lost of memory becuase of a full RAM chip could be tranmatic for any business owner.
+      NWM Technologies is here to fix that problem. Clients can schedule yearly susbscriptions for upgrades with our company for a flat rate. Hardware upgrades are always an annually or biannually procedure that companies go through to help
+      keep the company computers up to date with the newest technologies. Our team of tehcnicans perform computer and router installs and uninstalls. This includes the computer, monitors, RJ-45 and all other wire compents the companies needs
+      to be installed. NWM Technologies also performs <strong> Projector </strong> installs and bulb replacements on the company site.<h1> On the Software side: </h1> NWM Technologies performs <strong> Malware cleanups </strong> and <strong> IP Configurations </strong>. Privacy and secuirty are
+      guy factors that hurt companies all over the world due to careless habits like employees searching the web on company networks. Schedule an appointment and NWM Technologies will come do a full compuer cleanup for your company.
+      For new comapanies, IP Configurations can easily be appointed to for clients in need of Network set up.<strong> Data imaging </strong> also falls in that category of computer installs and upgrades for companies looking for a new software upgrades on new computers. Most companies have plans with computer distributors
+      for order in bulk for thier company that last for years. Most of these computers get sent back to the company for refurbishing and sent back to the company for the rest of their contract. Upgrading the refurbished computers can be time consuming and distributors choose not to do such a job,
+      leaving the neighboring company to deal with computers that have Windows 7 operating systems installed. NWM Technologies will gladly come in and install these devices with great pleasure anf effeicency for your company.</p>
+  </div>
+<button class="accordion">Transportable Computing Servicing</button>
+    <div class="panel">
+  <p>NWM Technologies works to make the life of clients easy. Implementing the tranferable system for standard clients is what will set NWM Technologies apart from competitors. Our system of "on call" servicing will make scheduling appointments easy for Client
+    who are on a tight schedule and need companies to work with them rather than the other away around. Our team of techs are all around your area waiting for calls to come in so they are report any and every where at a quick and reasonable time. Making an appointmnet is easy with NWM Technologies.
+    You post your request and what job you want to performed and this goes to a database that all of our techs and developers can see. Some of our competitors have a limited amount of techs on call, making it hard for companies to work with the client's schuedule. Our team has a plethora of techs and developers on call waiting to claim a job.
+    There will always be a developer available for clients eager to meet the clients tight schedule.</p>
+  </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i=0; i < acc.length; i++){
+    acc[i].onclick = function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight){
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    }
+  }
+</script>
+<br>
+	<div class="row">
+  <div class="newspaper">NWM Technology was created to give college students specifically the opportunity to develop thier skills in the IT and software development. Everyone comes across a problem with thier computer, and NWM Techologies wants to become your go-to computer service company. Millenials have grown up with the evolution of computing, and IMC Technolgoies is here to innovate your customer service experience. Everyone gets lazy at times, we get that; which is why our team of developers are here to make it easier for the client to get thier computer problems resolved effort free by the client. Using our tranportation system, IMC Technologies can respond immediately to clients looking for a quick repair or troubleshoot before that homework assignment or business report is due in the next 30 minutes. Our live database for techs and developers are open to the public to see who exactly is availability at that very moment. Most companies are always packed and busy to asset clients, leaving the client waiting for support. This can be both inconvinent and stressful for the client given that time is precious for meeting deadlines. This is where IMC Technologies seperates itself from competitors. College students are always on the move, going from one arrend to the next. Given that statement, college students also have some of the most linient schedules; making them the primary candidate for our company. Marcus' idea for the comapny somewhat combines a tech vendor transportation service. <h1> Here's how it works! </h1> A client submits a request for computer repair/development, that request gets posted on IMC Technologies forum for all local techs and developers to see. The system works on a "first come first served" basis. Given your concentration with the company, you can claim that specifiv job, done. We want to make this process as smooth as possible for our client so IMC Technologies comes to you, wherever you are located. Techs are assigned geographically. If the client lives in Charlotte, NC and submits a request, only our team of techs and developers located in Charlotte, NC will see it and can accept that job. IMC Technologies wants to cut waiting times for clients by implementting "on call" system. Marcus' goal is to get pursuing Computer Science majors invovled in field of technology. "Our generation is next to rule the world, so why not help develop technologically" -Marcus Lindsay
+
+  </div>
+
+
+  <div class="row">
+
+
+
+<div class="col-12">
+  <h1>Concept for IMC Technologies L.L.C</h1>
+  <p>IMC Technologies started in 2016 in Charlotte, NC. The CEO and Founder Marcus Lindsay thought the world needed a computer service that is both cost efficent and transportable.
+  IMC Technology is looking to innovate the world of computing technology by getting pursuing Computer Science students invovled in the field. The demand for computer science has skyrocked and has continued to be the
+  desired skills/ degree employers are looking for. This company aims for getting pursuing computer sceicne degree undergrads the ability to develop thier skills and create a portfolio for future employers to see.
+  One of the biggest issues for graduates coming out of college is how much expereince they have prior to accepting a job. IMC Technologies is here to help undergrads who want to stay ahead of the curve in the field of computing.</p>
+  <p>IMC Techologies is created for you, the customer. Technology is our profession and expertise!</p>
+</div>
+
+</div>
+
+
+
+
+
+    <div class="col-12">
+        Hello,
+
+       Thank you for visitng IMC Technologies, the primere service for technological services and innovation.
+       The company was merely a dream about a year ago in Charlotte, NC 2016. I, Marcus Lindsay, the founder and creator of
+       IMC Technologies felt the need to bring my skills and creativity into the IT field and that is when IMC Technologies was formed.
+       IMC Technologies provides the best effective services for computing issues that effect users daily. Our company focuses software/hardware repairs and curations.
+       We feel that IMC Technologies seperates itself from most companies in our field by our modern and innnovation customer services and all around experience from start to finish.
+        </div>
+
+      <div id="googleMap" style="width:100%;height:400px;"></div>
+    <script>
+    function myMap() {
+    var mapProp= {
+        center:new google.maps.LatLng(35.2271,80.8431),
+        zoom:5,
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+
+    <div class="footer">
+			<p>NWM Technologies L.L.C </p>
+			<p><a href="https://www.facebook.com/NWMTechsolutions/" class="fa fa-facebook"></a>
+			<a href="https://www.instagram.com/nwmtechnologies/" class="fa fa-instagram"></a><a href="mailto:nwmtechsolutions@gmail.com?Subject=Hello%20again" target="_top" class="fa fa-google"></a></p>
+
+	</div>
+</div>
+	</body>
+</html>
